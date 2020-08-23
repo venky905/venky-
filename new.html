@@ -29,6 +29,9 @@
   drift.SNIPPET_VERSION = '0.3.1';
   drift.load('s47twx3sxc68');
   </script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
   <!-- End of Async Drift Code -->
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -314,7 +317,7 @@
 
 
 <div class="testbox">
-      <form action="/">
+      <form id="database">
         <div class="banner">
           <h1>ADMISSION FORM</h1>
         </div>
@@ -322,7 +325,7 @@
         <div class="colums">
           <div class="item">
             <label >Full Name<span>*</span></label>
-            <input id="Full Name" name="Full Name" required/>
+            <input id="FullName" name="FullName" required/>
           </div>
           <div class="item">
             <label >DOB<span>*</span></label>
@@ -331,60 +334,80 @@
           
           <div class="item">
             <label >Father name<span>*</span></label>
-            <input id="Father name" type="number"   name="Father name" required/>
+            <input id="Fathername"    name="Fathername" required/>
           </div>
           <div class="item">
             <label >Mobile number<span>*</span></label>
-            <input id="Mobile number" type="number"   name="Mobile number" required/>
+            <input id="Mobilenumber"    name="Mobilenumber" required/>
           </div>
           <div class="item">
             <label >Mail id<span>*</span></label>
-            <input id="Mail id" type="number"   name="Mail id" required/>
+            <input id="Mailid"    name="Mailid" required/>
           </div>
           <div class="item">
             <label >Adress<span>*</span></label>
-            <input id="Adress" type="number"   name="Adress" required/>
+            <input id="Adress"   name="Adress" required/>
           </div>
           <div class="item">
             <label >10th cgpa<span>*</span></label>
-            <input id="10th cgpa" type="number"   name="10th cgpa" required/>
+            <input id="tenthcgpa" type="number"   name="tenthcgpa" required/>
           </div>
           <div class="item">
             <label >Intermediate percentage<span>*</span></label>
-            <input id="Intermediate percentage" type="number"   name="Intermediate percentage" required/>
+            <input id="Intermediatepercentage" type="number"   name="Intermediatepercentage" required/>
           </div>
           <div class="item">
             <label >Eamcet Hall ticket number<span>*</span></label>
-            <input id="Eamcet Hall ticket number"    name="Eamcet Hall ticket number" required/>
+            <input id="EamcetHallticketnumber"    name="EamcetHallticketnumber" required/>
           </div>
           <div class="item">
             <label >Eamcet Rank<span>*</span></label>
-            <input id="Eamcet Rank"    name="Eamcet Rank" required/>
+            <input id="EamcetRank"    name="EamcetRank" required/>
           </div>
           <div class="item">
             <label >Income Certificate Number<span>*</span></label>
-            <input id="Income Certificate number"   name="Income Certificate number" required/>
+            <input id="IncomeCertificatenumber"   name="IncomeCertificatenumber" required/>
           </div>
           <div class="item">
             <label >Caste Certificate number<span>*</span></label>
-            <input id="Caste Certificate number"   name="Caste Certificate number" required/>
+            <input id="CasteCertificatenumber"   name="CasteCertificatenumber" required/>
           </div>
   
           <div class="item">
             <label >Intrested Branch<span>*</span></label>
-            <input id="Intrested Branch"  name="Intrested Branch" required/>
+            <input id="IntrestedBranch"  name="IntrestedBranch" required/>
           </div>
         </div>
         
         <div class="item">
           
         <div class="btn-block">
-          <button type="submit" href="/">Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
+    <script>
+  // Your web app's Firebase configuration
+   var firebaseConfig = {
+    apiKey: "AIzaSyBSSQMJ23vNRCBOSiOXe1hM-7fjJiCe1qc",
+    authDomain: "project-d1952.firebaseapp.com",
+    databaseURL: "https://project-d1952.firebaseio.com",
+    projectId: "project-d1952",
+    storageBucket: "project-d1952.appspot.com",
+    messagingSenderId: "1085553586056",
+    appId: "1:1085553586056:web:f75d4ea4bb9b3e827d143d",
+    measurementId: "G-FKD0FZHC1L"
+  };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+          const db=firebase.firestore();
+          
+        </script>
+        <script src="app.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
   </body>
 </html>
